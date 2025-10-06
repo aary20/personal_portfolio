@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarya Patel - Personal Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <!-- Animated background particles -->
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Get In Touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <i class="fas fa-check-circle"></i>
+        <span>Message sent successfully!</span>
+    </div>
+
+    <header>
+        <nav class="fade-in">
+            <div class="left">
+                <i class="fas fa-code"></i>
+                <span>Aarya Patel</span>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#skills"><i class="fas fa-cogs"></i> Skills</a></li>
+                    <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+                    <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+                    <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="firstSection">
+            <div class="leftSection slide-in-left">
+                <div class="greeting">Hello, I'm</div>
+                <h1><span class="purple">Aarya Patel</span></h1>
+                <div class="subtitle">I'm a passionate</div>
+                <span id="element"></span>
+                <p class="bio">Computer Science student at LNCT Group of Colleges with expertise in Python, web development, and data analysis. Passionate about creating innovative solutions and solving complex problems.</p>
+                <div class="buttons">
+                    <button class="resume hover-effect" onclick="downloadResume()">
+                        <i class="fas fa-download"></i> Download Resume
+                    </button>
+                    <button class="github hover-effect" onclick="openGithub()">
+                        <i class="fab fa-github"></i> Visit Github
+                    </button>
+                    <button class="linkedin hover-effect" onclick="openLinkedIn()">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </button>
+                </div>
+            </div>
+            <div class="rightSection slide-in-right">
+                <div class="profile-container">
+                    <div class="profile-background"></div>
+                    <img src="for_linkedin.png" alt="Aarya Patel's Profile" class="profile-img">
+                    <div class="profile-overlay">
+                        <div class="social-links">
+                            <a href="#" onclick="openGithub()" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" onclick="openLinkedIn()" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" onclick="openEmail()" class="social-link">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="animated-hr">
+
+        <!-- Enhanced Skills Section -->
+        <section id="skills" class="skillsSection">
+            <div class="section-header fade-in-up">
+                <span class="text-gray">What I'm proficient in</span>
+                <h1>Skills & Technologies</h1>
+            </div>
+            
+            <div class="skills-container">
+                <div class="skill-category fade-in-up">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                            <span class="skill-percentage">90%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">SQL</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">HTML/CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="88%"></div>
+                            </div>
+                            <span class="skill-percentage">88%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in-up">
+                    <h3><i class="fas fa-tools"></i> Frameworks & Libraries</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Django</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Pandas</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">NumPy</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Matplotlib</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Seaborn</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category fade-in-up">
+                    <h3><i class="fas fa-database"></i> Technologies & Tools</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Git/GitHub</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">OpenCV</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Scikit-learn</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">AWS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65%"></div>
+                            </div>
+                            <span class="skill-percentage">65%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="animated-hr">
+
+        <!-- Enhanced Projects Section -->
+        <section id="projects" class="projectsSection">
+            <div class="section-header fade-in-up">
+                <span class="text-gray">What I've built</span>
+                <h1>Featured Projects</h1>
+            </div>
+            
+            <div class="projects-container">
+                <div class="project-card hover-lift">
+                    <div class="project-image">
+                        <img src="datavis.png" alt="Netflix Data Analysis">
+                        <div class="project-overlay">
+                            <button class="preview-btn" onclick="openProjectDemo('netflix')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Netflix Data Analysis</h3>
+                        <p>A data-driven exploration of Netflix's content catalog, uncovering trends in content types, release timing, genres, and countries of origin using Python data analysis libraries.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Seaborn</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aary20/Netflix-Data-Analysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card hover-lift">
+                    <div class="project-image">
+                        <img src="webd.png" alt="AI Interview Preparation Platform">
+                        <div class="project-overlay">
+                            <button class="preview-btn" onclick="openProjectDemo('interviewprep')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AI-Based Interview Preparation Platform</h3>
+                        <p>A comprehensive web application that helps users prepare for job interviews by generating questions based on resumes, analyzing answers, and providing AI-based feedback with performance reports.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">AI/NLP</span>
+                            <span class="tech-tag">Speech-to-Text</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aary20/interviewprep" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card hover-lift">
+                    <div class="project-image">
+                        <img src="sql.png" alt="Sentiment Analysis">
+                        <div class="project-overlay">
+                            <button class="preview-btn" onclick="openProjectDemo('sentiment')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sentiment Analysis Using Machine Learning</h3>
+                        <p>Advanced sentiment analysis project using machine learning techniques to classify text reviews into positive, negative, or neutral sentiments with high accuracy.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLTK</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aary20/sentiment_analysis" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card hover-lift">
+                    <div class="project-image">
+                        <img src="pyprog.png" alt="Face Recognition">
+                        <div class="project-overlay">
+                            <button class="preview-btn" onclick="openProjectDemo('facerecognition')">
+                                <i class="fas fa-eye"></i> Preview
+                            </button>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Face Recognition Using Python</h3>
+                        <p>A comprehensive face recognition system built using Python, OpenCV, and dlib. Capable of detecting and recognizing faces from images and real-time video streams with high accuracy.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">dlib</span>
+                            <span class="tech-tag">NumPy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/aary20/face-recognition-using-python" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="animated-hr">
+
+        <!-- Enhanced Education Section -->
+        <section id="education" class="educationSection">
+            <div class="section-header fade-in-up">
+                <span class="text-gray">My academic journey</span>
+                <h1>Education</h1>
+            </div>
+            
+            <div class="education-timeline">
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Nov 2022 - 2026 (Ongoing)</div>
+                        <h3>B.Tech in Computer Science Engineering</h3>
+                        <p class="institution">LNCT Group of Colleges, Bhopal</p>
+                        <p class="description">Specializing in Blockchain Technology with focus on cybersecurity, computer networks, and software engineering. Currently maintaining a strong academic record.</p>
+                        <div class="achievements">
+                            <span class="achievement">CGPA: 7.84/10</span>
+                            <span class="achievement">Blockchain Technology</span>
+                            <span class="achievement">Cybersecurity Focus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">April 2021 - July 2022</div>
+                        <h3>Higher Secondary Education</h3>
+                        <p class="institution">Kendriya Vidyalaya, Mandla</p>
+                        <p class="description">Completed Higher Secondary Education with PCM and Computer Science under CBSE board.</p>
+                        <div class="achievements">
+                            <span class="achievement">Computer Science</span>
+                            <span class="achievement">PCM</span>
+                            <span class="achievement">Percentage: 85%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">April 2019 - July 2020</div>
+                        <h3>Secondary Education</h3>
+                        <p class="institution">Kendriya Vidyalaya, Mandla</p>
+                        <p class="description">Completed Secondary Education under CBSE board, focusing on core academic and foundational subjects.</p>
+                        <div class="achievements">
+                            <span class="achievement">Percentage: 85%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="animated-hr">
+
+        <!-- Separate Certifications Section -->
+        <section id="certifications" class="certificationsSection">
+            <div class="section-header fade-in-up">
+                <span class="text-gray">My achievements</span>
+                <h1>Certifications</h1>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="cert-card fade-in-up">
+                    <div class="cert-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>500+ DSA Problems Solved</h3>
+                        <p class="cert-platform">CodeChef, LeetCode, SPOJ</p>
+                        <p class="cert-description">Demonstrated strong problem-solving skills by solving over 500 data structures and algorithms problems across multiple competitive programming platforms.</p>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in-up">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>AWS Academy Cloud Foundations</h3>
+                        <p class="cert-platform">Amazon Web Services</p>
+                        <p class="cert-description">Comprehensive certification covering cloud computing fundamentals, AWS core services, security, architecture, and pricing models.</p>
+                    </div>
+                </div>
+
+                <div class="cert-card fade-in-up">
+                    <div class="cert-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="cert-content">
+                        <h3>Python Essentials 1 & 2</h3>
+                        <p class="cert-platform">Cisco Networking Academy</p>
+                        <p class="cert-description">Advanced Python programming certification covering object-oriented programming, data structures, file handling, and advanced Python concepts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <hr class="animated-hr">
+
+        <!-- Enhanced Footer -->
+        <footer id="contact" class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-user"></i> Aarya's Personal Portfolio</h3>
+                    <p>A passionate Computer Science student dedicated to creating innovative solutions and solving complex problems through technology.</p>
+                    <div class="footer-stats">
+                        <div class="stat">
+                            <span class="stat-number">4+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">DSA Problems</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3><i class="fas fa-share-alt"></i> Connect With Me</h3>
+                    <div class="social-links-footer">
+                        <a href="https://www.linkedin.com/in/aarya-patel-80177a254/" class="social-link-footer" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/aary20" class="social-link-footer" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:aaryapatel204@gmail.com" class="social-link-footer">
+                            <i class="fas fa-envelope"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://www.instagram.com/_.aaryaaaa._._/" class="social-link-footer" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#home" class="footer-link">Home</a>
+                        <a href="#skills" class="footer-link">Skills</a>
+                        <a href="#projects" class="footer-link">Projects</a>
+                        <a href="#education" class="footer-link">Education</a>
+                        <a href="#certifications" class="footer-link">Certifications</a>
+                        <a href="#experience" class="footer-link">Experience</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3><i class="fas fa-paper-plane"></i> Get In Touch</h3>
+                    <p>Ready to collaborate on your next project?</p>
+                    <button class="contact-btn hover-effect" onclick="openContactModal()">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </button>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> aaryapatel204@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Bhopal, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-rights">
+                    <p>&copy; 2024 Aarya Patel. All rights reserved.</p>
+                    <p>Built with <i class="fas fa-heart"></i> and lots of <i class="fas fa-coffee"></i></p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Python Developer', 'Web Developer', 'Data Analyst', 'Problem Solver'],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 1000,
+            loop: true
+        });
+
+        function downloadResume() {
+            // Replace with your actual resume file path
+            const link = document.createElement('a');
+            link.href = 'resume.pdf'; // Make sure to add your resume file
+            link.download = 'Aarya_Resume.pdf';
+            link.click();
+        }
+
+        function openGithub() {
+            window.open('https://github.com/aary20', '_blank');
+        }
+
+        function openLinkedIn() {
+            window.open('https://www.linkedin.com/in/aarya-patel-80177a254/', '_blank');
+        }
+
+        function openEmail() {
+            window.location.href = 'mailto:aaryapatel204@gmail.com?subject=Hello Aarya&body=Hi Aarya, I would like to connect with you.';
+        }
+
+        function openInstagram() {
+            window.open('https://www.instagram.com/_.aaryaaaa._._/', '_blank');
+        }
+
+        function openWhatsApp() {
+            window.open('https://wa.me/1234567890?text=Hello Aarya, I saw your portfolio and would like to connect!', '_blank');
+        }
+
+        function openProjectDemo(project) {
+            const demos = {
+                'datavis': 'https://your-datavis-demo.com',
+                'ecommerce': 'https://your-ecommerce-demo.com',
+                'database': 'https://your-database-demo.com'
+            };
+            
+            if (demos[project]) {
+                window.open(demos[project], '_blank');
+            } else {
+                showNotification('Demo coming soon!', 'info');
+            }
+        }
+
+        function openGithubProject(project) {
+            const repos = {
+                'datavis': 'https://github.com/yourusername/data-visualization-project',
+                'ecommerce': 'https://github.com/yourusername/ecommerce-website',
+                'database': 'https://github.com/yourusername/database-management-system'
+            };
+            
+            if (repos[project]) {
+                window.open(repos[project], '_blank');
+            } else {
+                showNotification('Repository coming soon!', 'info');
+            }
+        }
+
+        // Contact Modal Functions
+        function openContactModal() {
+            document.getElementById('contactModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeContactModal() {
+            document.getElementById('contactModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const subject = formData.get('subject');
+            const message = formData.get('message');
+            
+            // Simulate form submission (replace with actual backend integration)
+            setTimeout(() => {
+                closeContactModal();
+                showSuccessMessage();
+                this.reset();
+            }, 1000);
+        });
+
+        function showSuccessMessage() {
+            const successMsg = document.getElementById('successMessage');
+            successMsg.style.display = 'flex';
+            setTimeout(() => {
+                successMsg.style.display = 'none';
+            }, 3000);
+        }
+
+        function showNotification(message, type) {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check' : 'info'}-circle"></i>
+                <span>${message}</span>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 100);
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Modal Event Listeners
+        document.querySelector('.close').addEventListener('click', closeContactModal);
+        
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('contactModal');
+            if (e.target === modal) {
+                closeContactModal();
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in-up, .slide-in-left, .slide-in-right, .hover-lift').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Skill bar animation
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress');
+                    progressBars.forEach(bar => {
+                        const width = bar.getAttribute('data-width');
+                        bar.style.width = width;
+                    });
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.skills-grid').forEach(el => {
+            skillObserver.observe(el);
+        });
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+
+</html>
