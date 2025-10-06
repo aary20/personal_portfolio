@@ -1,8 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+.name-logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.name-symbol-attractive {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #40E0D0, #20B2AA, #1E90FF);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 8px 25px rgba(64, 224, 208, 0.4);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.name-symbol-attractive::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+} 
+
+.name-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #E0E0E0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px; 
+}
+
+.section-header h1 {
+    font-size: 2.8rem;
+    margin-top: 15px;
+    background: linear-gradient(45deg, #40E0D0, #20B2AA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+    font-family: "Playfair Display", serif; /* Changed font */
+    letter-spacing: 1px;
+}
+
+.text-gray {
+    color: #40E0D0;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: "Playfair Display", serif; /* Changed font */
+}
+
 
 body {
     background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
@@ -19,7 +87,6 @@ body.loaded {
     opacity: 1;
 }
 
-/* Animated Background Particles */
 .particles {
     position: fixed;
     top: 0;
@@ -57,7 +124,6 @@ body.loaded {
     100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -153,7 +219,6 @@ body.loaded {
     box-shadow: 0 10px 25px rgba(64, 224, 208, 0.3);
 }
 
-/* Success Message */
 .success-message {
     position: fixed;
     top: 20px;
@@ -202,7 +267,6 @@ body.loaded {
     background: linear-gradient(45deg, #2196F3, #1976D2);
 }
 
-/* Enhanced Navigation Styles */
 nav {
     display: flex;
     justify-content: space-between;
@@ -254,11 +318,11 @@ nav ul li a {
     color: #E0E0E0;
     transition: all 0.3s ease;
     position: relative;
-    padding: 8px 16px;
+    padding: 5px 13px;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.8px;
     font-weight: 500;
 }
 
@@ -515,6 +579,11 @@ nav ul li a i {
     margin-bottom: 80px;
 }
 
+h1, h2, h3 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+}
+
 .section-header h1 {
     font-size: 2.8rem;
     margin-top: 15px;
@@ -535,9 +604,8 @@ nav ul li a i {
     font-family: "Montserrat", sans-serif;
 }
 
-/* Enhanced Skills Section */
 .skillsSection {
-    padding: 100px 5%;
+    padding: 60px 5%; /* Reduced from 100px */
     background: rgba(26, 26, 46, 0.3);
 }
 
@@ -568,7 +636,7 @@ nav ul li a i {
     font-size: 1.4rem;
     color: #E0E0E0;
     font-weight: 600;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Playfair Display", serif;
 }
 
 .skill-category h3 i {
@@ -583,42 +651,34 @@ nav ul li a i {
 
 .skill-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 15px;
     margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(64, 224, 208, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+    background: rgba(64, 224, 208, 0.1);
+    transform: translateX(5px);
+}
+
+.skill-icon {
+    font-size: 1.5rem;
+    color: #40E0D0;
+    width: 24px;
+    text-align: center;
 }
 
 .skill-name {
     font-weight: 600;
     color: #E0E0E0;
     flex: 1;
+    font-family: "Montserrat", sans-serif;
 }
 
-.skill-bar {
-    background: rgba(255, 255, 255, 0.1);
-    height: 8px;
-    border-radius: 10px;
-    overflow: hidden;
-    flex: 2;
-    margin: 0 15px;
-}
-
-.skill-progress {
-    height: 100%;
-    background: linear-gradient(45deg, #40E0D0, #20B2AA);
-    width: 0;
-    transition: width 2s ease;
-    border-radius: 10px;
-}
-
-.skill-percentage {
-    font-weight: 600;
-    color: #40E0D0;
-    min-width: 50px;
-    text-align: right;
-}
-
-/* Enhanced Projects Section */
 .projectsSection {
     padding: 100px 5%;
 }
@@ -1093,11 +1153,19 @@ nav ul li a i {
     font-size: 0.85rem;
 }
 
-.social-links-footer {
+.social-links-footer-aligned {
     display: flex;
+    flex-direction: column;
     gap: 12px;
     margin-top: 15px;
-    flex-wrap: wrap;
+}
+
+.social-label {
+    color: #B0B0B0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    min-width: 80px;
+    font-family: "Montserrat", sans-serif;
 }
 
 .social-link-footer {
@@ -1112,12 +1180,20 @@ nav ul li a i {
     color: #40E0D0;
     text-decoration: none;
     transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.social-item-line {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 8px 0;
 }
 
 .social-link-footer:hover {
     background: #40E0D0;
     color: white;
-    transform: translateY(-3px);
+    transform: scale(1.1);
 }
 
 .footer-links {
@@ -1195,14 +1271,20 @@ nav ul li a i {
     margin: 0 4px;
 }
 
-/* Animated HR */
 .animated-hr {
     border: none;
     height: 2px;
     background: linear-gradient(90deg, transparent, #40E0D0, transparent);
-    margin: 80px auto;
-    width: 200px;
-    animation: hrGlow 2s ease-in-out infinite alternate;
+    margin: 30px 0; /* Reduced from default */
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Reduced Section Spacing */
+.projectsSection,
+.educationSection,
+.certificationsSection,
+.experienceSection {
+    padding: 60px 5%; /* Reduced from 100px */
 }
 
 @keyframes hrGlow {
