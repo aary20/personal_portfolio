@@ -4,6 +4,7 @@
         "CGPA",
         "datavis",
         "dlib",
+        "ebhryvt",
         "ecommerce",
         "facerecognition",
         "interviewprep",
@@ -12,9 +13,11 @@
         "Mandla",
         "Matplotlib",
         "NLTK",
+        "pyprog",
         "Scikit",
         "Seaborn",
         "SPOJ",
-        "Vidyalaya"
+        "Vidyalaya",
+        "webd"
     ]
 }
